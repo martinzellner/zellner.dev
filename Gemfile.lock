@@ -322,7 +322,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.12)
-  jekyll-remote-theme
 
 BUNDLED WITH
    2.5.18
