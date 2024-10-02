@@ -2,6 +2,7 @@ title: Hello
 description: "nice to meet you."
 url: "https://zellner.dev"
 profile_image: "/assets/images/me.jpg"
+baseurl: "/"
 
 author:
   name:           'Martin Zellner'
@@ -10,6 +11,10 @@ author:
 hyde:
   theme: dark
   sidebar_position: left
+
+pages:
+  - title: "Hiking"
+    url: "hiking.html"
 
 sidebar_links:
   - title: "LinkedIn"
