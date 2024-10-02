@@ -7,7 +7,7 @@ author:
   name:           'Martin Zellner'
 
 # Build settings
-remote_theme: jekyll-theme-hyde
+theme: jekyll-theme-hyde
 
 # Hyde theme settings
 hyde:
