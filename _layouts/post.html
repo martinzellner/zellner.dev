@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
+</div>
+<!-- 
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div> -->
+
+
+{% if page.gpx %}
+
+<h2>Trail Map</h2>
+<div id="map"></div>
+
+<!-- Initialize the map -->
+<script>
+  // Create the map and set initial view
+  var map = L.map('map');
+
+  // Add a tile layer (the background map image)
+  {% if page.map_type == 'swiss' %}
+  L.tileLayer('https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-grau/default/current/3857/{z}/{x}/{y}.jpeg', {
+    attribution: '&copy; <a href="https://www.swisstopo.admin.ch/">swisstopo</a>',
+    maxZoom: 18,
+    bounds: [[45.398181, 5.140242], [48.230651, 11.47757]]
+  }).addTo(map);
+  {% else %}
+  L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.{ext}', {
+    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+    ext: 'png'
+  }).addTo(map);
+  {% endif %}
+
+
+  // Load the GPX file
+  var gpx = '{{ page.gpx }}'; // URL to your GPX file
+
+  // Use the GPX plugin to load and display the GPX track
+  new L.GPX(gpx, {
+    async: true,
+    marker_options: {
+      startIconUrl: null,
+      endIconUrl: null,
+      shadowUrl: null,
+    },
+    polyline_options: {
+      color: 'blue',
+      weight: 5,
+      opacity: 0.75,
+    },
+  }).on('loaded', function (e) {
+    map.fitBounds(e.target.getBounds());
+  }).addTo(map);
+</script>
+
+{% endif %}

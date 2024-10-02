@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Annapurna Circuit: The First Days – From Bhulbhule (840m) to Chame (2670m)"
+gpx: "/assets/tracks/hiking/2023-11-16-annapurna-circuit-1.gpx"
 ---
-
-# {{ page.title }}
 
 ![Nepali Prayer Flags are everywhere along the way](/assets/images/hiking/2023-11-16-annapurna-circuit-1/DSC03450.jpg)
 *Nepali Prayer Flags are everywhere along the way*
