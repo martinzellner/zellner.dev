@@ -1,0 +1,28 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 30%;
+}
+
+.sidebar-image {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0.7rem;
+}
+
+.sidebar-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+/* Content Styles */
+.content {
+    padding: 5%;
+    margin-left: 30%;
+    margin-top: 20%;
+}

@@ -1,0 +1,25 @@
+title: Hello
+description: "nice to meet you."
+url: "https://zellner.dev"
+profile_image: "/assets/images/me.jpg"
+
+author:
+  name:           'Martin Zellner'
+
+# Build settings
+theme: jekyll-theme-hyde
+
+# Hyde theme settings
+hyde:
+  theme: dark
+  sidebar_position: left
+
+sidebar_links:
+  - title: "LinkedIn"
+    url: "https://www.linkedin.com/in/martin-zellner/"
+  - title: "GitHub"
+    url: "https://github.com/martinzellner/"
+  - title: "Photography"
+    url: "https://www.photango.de/"
+  - title: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=uzhWKx0AAAAJ&hl=de"
