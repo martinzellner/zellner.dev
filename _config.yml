@@ -6,9 +6,6 @@ profile_image: "/assets/images/me.jpg"
 author:
   name:           'Martin Zellner'
 
-# Build settings
-theme: jekyll-theme-hyde
-
 # Hyde theme settings
 hyde:
   theme: dark
